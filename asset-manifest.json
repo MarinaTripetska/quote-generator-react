@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/quote-generator-react/static/css/main.9311cd49.chunk.css",
-    "main.js": "/quote-generator-react/static/js/main.c8b86faa.chunk.js",
-    "main.js.map": "/quote-generator-react/static/js/main.c8b86faa.chunk.js.map",
+    "main.css": "/quote-generator-react/static/css/main.49b78ed8.chunk.css",
+    "main.js": "/quote-generator-react/static/js/main.3f7db499.chunk.js",
+    "main.js.map": "/quote-generator-react/static/js/main.3f7db499.chunk.js.map",
     "runtime-main.js": "/quote-generator-react/static/js/runtime-main.a4afe33b.js",
     "runtime-main.js.map": "/quote-generator-react/static/js/runtime-main.a4afe33b.js.map",
-    "static/js/2.1dd65334.chunk.js": "/quote-generator-react/static/js/2.1dd65334.chunk.js",
-    "static/js/2.1dd65334.chunk.js.map": "/quote-generator-react/static/js/2.1dd65334.chunk.js.map",
+    "static/js/2.1beb4080.chunk.js": "/quote-generator-react/static/js/2.1beb4080.chunk.js",
+    "static/js/2.1beb4080.chunk.js.map": "/quote-generator-react/static/js/2.1beb4080.chunk.js.map",
     "index.html": "/quote-generator-react/index.html",
-    "static/css/main.9311cd49.chunk.css.map": "/quote-generator-react/static/css/main.9311cd49.chunk.css.map",
-    "static/js/2.1dd65334.chunk.js.LICENSE.txt": "/quote-generator-react/static/js/2.1dd65334.chunk.js.LICENSE.txt"
+    "static/css/main.49b78ed8.chunk.css.map": "/quote-generator-react/static/css/main.49b78ed8.chunk.css.map",
+    "static/js/2.1beb4080.chunk.js.LICENSE.txt": "/quote-generator-react/static/js/2.1beb4080.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/quote-generator-react/static/media/davies-designs-studio-_UCVrH-ZIIg-unsplash.58f26b46.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.a4afe33b.js",
-    "static/js/2.1dd65334.chunk.js",
-    "static/css/main.9311cd49.chunk.css",
-    "static/js/main.c8b86faa.chunk.js"
+    "static/js/2.1beb4080.chunk.js",
+    "static/css/main.49b78ed8.chunk.css",
+    "static/js/main.3f7db499.chunk.js"
   ]
 }
