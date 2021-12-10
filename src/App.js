@@ -6,6 +6,10 @@ import "./App.css";
 import { getRandomQuote } from "./func/getRandomQuote";
 import QuoteContainer from "./components/QuoteContainer";
 
+const getRandomNum = (min, max) => {
+  return Math.floor(Math.random() * (max - min) + min);
+};
+
 function App() {
   const { data, isLoading, isError, error, isSuccess } = useQuery(
     "quotes",
@@ -28,8 +32,33 @@ function App() {
     if (!data) {
       return;
     }
-    setQuote(getRandomQuote(data));
+    const randomNum = getRandomNum(0, data.length - 1);
+    setQuote(getRandomQuote(data, randomNum));
   }, [data]);
+
+  const onButtonRefreshClick = () => {
+    const randomNum = getRandomNum(0, data.length - 1);
+    setQuote(getRandomQuote(data, randomNum));
+  };
+
+  const onButtonPrevClick = () => {
+    const actQuote = data.find((q) => q.quote === quote.quote);
+    if (data.indexOf(actQuote) === 0) {
+      setQuote(data[data.length - 1]);
+      return;
+    }
+    setQuote(data[data.indexOf(actQuote) - 1]);
+  };
+
+  const onButtonNextClick = () => {
+    const actQuote = data.find((q) => q.quote === quote.quote);
+
+    if (data.indexOf(actQuote) === data.length - 1) {
+      setQuote(data[0]);
+      return;
+    }
+    setQuote(data[data.indexOf(actQuote) + 1]);
+  };
 
   if (isLoading) {
     return <h1>Quotes loading...</h1>;
@@ -43,7 +72,17 @@ function App() {
     return (
       <main>
         <h1>SuperQuotes Page</h1>
-        {quote && <QuoteContainer author={quote.author} quote={quote.quote} />}
+        {quote && (
+          <QuoteContainer
+            author={quote.author}
+            quote={quote.quote}
+            onButtonClick={{
+              onButtonRefreshClick,
+              onButtonPrevClick,
+              onButtonNextClick,
+            }}
+          />
+        )}
       </main>
     );
   }

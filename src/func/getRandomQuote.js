@@ -1,12 +1,6 @@
-const getRandomNum = (min, max) => {
-  return Math.floor(Math.random() * (max - min) + min);
-};
-
-export const getRandomQuote = (data) => {
-  const randomNum = getRandomNum(0, data.length - 1);
-
-  const quote = data.find((q, indx) => {
-    return indx === randomNum ?? q;
+export const getRandomQuote = (data, index) => {
+  const quote = data.find((q, i) => {
+    return i === index ?? q;
   });
   return quote;
 };
